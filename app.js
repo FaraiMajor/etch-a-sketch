@@ -1,17 +1,19 @@
 const container = document.querySelector('.grid');
-const gridSum = 100;
-const sizeOfGrid = gridSum;
+const resetButton = document.querySelector('button')
 
-function makegrid(gridSum) {
-    for (let i = 0; i < gridSum; i++) {
+
+const sizeOfGrid = 10;
+
+function makegrid(sizeOfGrid) {
+    for (let i = 0; i < sizeOfGrid; i++) {
         const row = document.createElement('div')
         row.classList.add('grid-row')
 
-        for (let j = 0; j < gridSum; j++) {
+        for (let j = 0; j < sizeOfGrid; j++) {
             const boxSize = 600 / sizeOfGrid
             const gridBox = document.createElement('div')
             gridBox.classList.add('grid-box')
-            gridBox.style.width = `${boxSize}px`
+            gridBox.style.width = `${boxSize}px`;
             gridBox.style.height = `${boxSize}px`
 
             gridBox.addEventListener('mouseenter', () => {
@@ -22,7 +24,15 @@ function makegrid(gridSum) {
         container.appendChild(row)
     }
 }
+
 makegrid(sizeOfGrid)
+
+resetButton.addEventListener('click', () => {
+    while (container.firstChild) {
+        container.removeChild(container.lastChild);
+    }
+    makegrid(sizeOfGrid)
+})
 
 // const allDivs = document.querySelectorAll('.grid-box')
 // allDivs.forEach(div => {
