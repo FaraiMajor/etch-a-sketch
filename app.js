@@ -50,10 +50,6 @@ slider.addEventListener('mouseup', (e) => {
 const rainbows = document.querySelector('.rainbow');
 
 function rainbow() {
-    var num = Math.round(0xffffff * Math.random());
-    var r = num >> 16;
-    var g = num >> 8 & 255;
-    var b = num & 255;
     const allDivs = document.querySelectorAll('.grid-box')
     allDivs.forEach(div => {
         div.addEventListener('mouseenter', () => {
