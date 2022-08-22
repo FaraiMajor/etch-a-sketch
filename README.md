@@ -1,6 +1,6 @@
 # etch-a-sketch
 
-## [Live Demo](https://faraimajor.github.io/calculator/)
+## [Live Demo](https://faraimajor.github.io/etch-a-sketch/)
 
 <img src = "https://github.com/FaraiMajor/etch-a-sketch/blob/main/etch.png" width = "750" />
 
